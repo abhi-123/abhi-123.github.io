@@ -36,16 +36,6 @@ var username = "";
      		Sendmessage("Current time is " +h+":"+m);
 
      	}
-		if( (message.indexOf("weather")>=0) || (message.indexOf("Weather")>=0))
-		{
-         Seather.forecast({
-cityID : '2502265', // Sunnyvale
-days : 5,
-position : '#seather',
-color : 'white', //  white, gray, cyan or red
-size : 'small' // small, middle or big.
-});		}
-		
 	}
   $(document).ready(function(){
   	get_username();
