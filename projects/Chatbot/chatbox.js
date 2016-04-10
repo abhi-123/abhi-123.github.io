@@ -28,7 +28,7 @@ var username = "";
 
      	}
      	if((message.indexOf("I am fine")>=0)||(message.indexOf("i am fine")>=0)){
-			Sendmessage("Ohhhhhh Now you want to ask about me that How am i?");
+			Sendmessage("Ohhhhhh Now you won't  ask about me that How i am?");
 		}
      	if( (message.indexOf("time")>=0) || (message.indexOf("Time")>=0))
      	{
