@@ -27,6 +27,9 @@ var username = "";
      		Sendmessage("Thanks! I m good");
 
      	}
+     	if((message.indexOf("I am fine")>=0)||(message.indexOf("i am fine")>=0)){
+			Sendmessage("Ohhhhhh Now you want to ask about me that How am i?");
+		}
      	if( (message.indexOf("time")>=0) || (message.indexOf("Time")>=0))
      	{
      		var date= new Date();
