@@ -125,7 +125,7 @@ margin-top:205px;
       <a href="#" class="brand-logo-left">ABportfolio.com</a>
       <ul class="right hide-on-med-and-down">
         <li><a id="myedu" href="#">My Education</a></li>
-        <li><a id="myprojects" href="#projecttext">Projects</a></li>
+        <li><a id="myprojects" href="#">Projects</a></li>
         <li><a id="contact" href="#">Contact Me</a></li>
       </ul>
 	</div>
@@ -188,24 +188,58 @@ I expect to graduate with a Bachelors degree &nbsp;in May  2017. I love to play 
 <script>
 	$(document).ready(function(){
       $('.parallax').parallax();
+	 var destination1=$(window).scrollTop();
+	 
 	$("#myprojects").click(function(){
-	var destination=$("#img1").scrollTop();
+	 var destination=$("#img1").offset().top;
 		var destination1=$(window).scrollTop();
-		console.log(destination);
-		console.log(destination1);
-		if(destination!=destination1)
+          console.log(destination1);	
+	if(destination1<645)
 		{
-	    return false;
+	   $('body').animate({scrollTop: $('#img1').offset().top +380}, 'slow');
+		}
+		else if(destination1>=645&&destination1<800)
+		{
+	   $('body').animate({scrollTop: $('#img1').offset().top +250}, 'slow');
+		}
+		else if(destination1>1080)
+		{
+		$('body').animate({scrollTop: $('#img1').offset().top +50}, 'fast');
+		
 		}
 	else{
-$('body').animate({scrollTop: $('#img1').offset().top +430}, 'slow');
+        return false;
         }
 		});
 		$("#myedu").click(function(){
-$('body').animate({scrollTop: $('.edutext').offset().top +665}, 'medium');
+		var destination1=$(window).scrollTop();
+          console.log(destination1);
+		  if(destination1<500)
+		  {
+$('body').animate({scrollTop: $('.edutext').offset().top +645}, 'slow');
+		}
+		else if(destination1>750){
+		$('body').animate({scrollTop: $('.edutext').offset().top -150}, 'fast');
+		
+		
+		}
+		else{
+		return false;
+		}
 		});
 		$("#contact").click(function(){
-$('body').animate({scrollTop: $('.contact').offset().top +1400}, 'slow');
+		var destination1=$(window).scrollTop();
+          console.log(destination1);
+		  if(destination1>=0&&destination1<750)
+		  {
+$('body').animate({scrollTop: $('.contact').offset().top+1400}, 'slow');
+		}
+		else if(destination1>750&&destination1<1100){
+		$('body').animate({scrollTop: $('.contact').offset().top +700}, 'slow');
+		}
+		else{
+		return false;
+		}
 		});
 	$(window).bind("scroll", function() {
     if ($(this).scrollTop() >210) {
