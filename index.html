@@ -118,15 +118,17 @@ margin-top:205px;
 </head>
 <body>
   <div class="parallax-container">
+  <div class="navbar-fixed">
   <nav style="background-color:teal;" >
     <div class="nav-wrapper">
 
       <a href="#" class="brand-logo-left">ABportfolio.com</a>
       <ul class="right hide-on-med-and-down">
         <li><a id="myedu" href="#">My Education</a></li>
-        <li><a id="myprojects" href="#">Projects</a></li>
+        <li><a id="myprojects" href="#projecttext">Projects</a></li>
         <li><a id="contact" href="#">Contact Me</a></li>
       </ul>
+	</div>
 	</div>
   </nav>
     <div class="parallax"><img id="img" src="bg2.jpg"></div>
@@ -187,8 +189,18 @@ I expect to graduate with a Bachelors degree &nbsp;in May  2017. I love to play 
 	$(document).ready(function(){
       $('.parallax').parallax();
 	$("#myprojects").click(function(){
+	var destination=$("#img1").scrollTop();
+		var destination1=$(window).scrollTop();
+		console.log(destination);
+		console.log(destination1);
+		if(destination!=destination1)
+		{
+	    return false;
+		}
+	else{
 $('body').animate({scrollTop: $('#img1').offset().top +430}, 'slow');
-        });
+        }
+		});
 		$("#myedu").click(function(){
 $('body').animate({scrollTop: $('.edutext').offset().top +665}, 'medium');
 		});
