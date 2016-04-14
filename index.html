@@ -79,7 +79,7 @@ display:none;
 }
 #linkimg>a{
 position:relative;
-margin-left:180px;
+margin-left:140px;
 bottom:50px;
 }
 #maintext{
@@ -114,6 +114,12 @@ display:none;
 position:absolute;
 margin-top:205px;
 }
+#bck{
+position:absolute;
+left:50px;
+bottom:-20px;}
+
+
 </style>
 </head>
 <body>
@@ -176,8 +182,10 @@ I expect to graduate with a Bachelors degree &nbsp;in May  2017. I love to play 
 <div id="linkimg">
 <a href="https://www.facebook.com/abhi.saxenarocks" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Connect me on FB"><img src="fb.png"></a>
 <a href="https://github.com/abhi-123" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Follow me on github"><img src="Git.png" width="128px" height="128px"></a>
-<a href="https://www.quora.com/profile/Abhishek-Saxena-77"class="tooltipped" data-position="right" data-delay="50" data-tooltip="Ask me on qoura"><img src="quora.png"></a>
+<a href="https://www.quora.com/profile/Abhishek-Saxena-77" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Ask me on qoura"><img src="quora.png"></a><br><br>
+<br><br><a id="bck" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Back-to-Top"><img src="up.png" width="30px" height="30px" /></a>
 </div>
+
 </div>
   
   </body>
@@ -241,6 +249,11 @@ $('body').animate({scrollTop: $('.contact').offset().top+1400}, 'slow');
 		return false;
 		}
 		});
+		$("#bck").click(function(){
+		var destination1=$(window).scrollTop();
+          console.log(destination1);
+$('body').animate({scrollTop: 0}, 'slow');
+		});
 	$(window).bind("scroll", function() {
     if ($(this).scrollTop() >210) {
         $(".edutext,h4").fadeIn(2000);
@@ -257,7 +270,7 @@ $('body').animate({scrollTop: $('.contact').offset().top+1400}, 'slow');
 });
 $(window).bind("scroll", function() {
 	if ($(this).scrollTop() > 800) {
-        $(".contact").fadeIn(800);
+        $(".contact").fadeIn(1200);
     } else {
         $(".contact").stop().fadeOut(600);
     }
