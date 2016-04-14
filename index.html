@@ -18,12 +18,12 @@ font-family: 'Josefin Slab', serif;}
 h3{
 color:white;
 font-family: 'Josefin Slab', serif;
-font-size:40px;
+font-size:30px;
 }
 p{
 color:white;
 font-family: 'Josefin Slab', serif;
-font-size:30px;
+font-size:20px;
 }
 .parallax-container{
 min-height:100vh;
@@ -100,6 +100,13 @@ font-size:25px;
 #img1{
 -webkit-filter:blur(15px);
 }
+#typewriter{
+margin-left:300px;
+margin-right:300px;
+}
+#learn{
+display:none;
+}
 </style>
 </head>
 <body>
@@ -118,12 +125,12 @@ font-size:25px;
     <div class="parallax"><img src="bg2.jpg"></div>
   <div id="maintext">
     <h3 class="center" id="h3">About me</h3>
-  <p class="center"> Hey friends MY name is Abhishek Saxena<br> I am web developer Learning web & wants a Better Web world for all of us.</br> I am learning &nbsp;web for 1 years
+  <p id="typewriter" class="center" > Hey friends MY name is Abhishek Saxena<br> I am web developer Learning web & wants a Better Web world for all of us.</br> I am learning &nbsp;web for 1 years
    BUT still i m learning.
   This is my portfolio which shows </br>
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspABOUT ME & MY PROJECTS</p><br>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspABOUT ME & MY PROJECTS</p><br><br><br><br>
   
- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now let's talk abt what i LEARN......<br><br>
+ <br><p id="learn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Technologies I have LEARN......<br><br>
 <a href="http://www.w3schools.com/html5/" target="blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="To make Page structure">HTML5</a>
 <a href="http://www.w3schools.com/css/" target="blank" class="tooltipped" data-position="top" data-delay="50" data-tooltip="To Style the page">CSS3</a>
  <a href="http://www.w3schools.com/js/" target="blank" class="tooltipped" data-position="left" data-delay="50" data-tooltip="To add functionality">JavaScript</a>
@@ -167,6 +174,8 @@ I expect to graduate with a Bachelors degree in May 2017. I love to play with we
   </body>
 <script src="jquery.js"></script>
 <script src="m.js"></script>
+<script src="typewriter.js"></script>
+
 <script>
 	$(document).ready(function(){
       $('.parallax').parallax();
@@ -200,6 +209,11 @@ $(window).bind("scroll", function() {
         $(".contact").stop().fadeOut(600);
     }
 	});
-	});
+	$("#typewriter").typewriter({
+       'speed':40 // default: 300
+
+});
+$("#learn").show(12000);
+});
 		</script>
 </html>
